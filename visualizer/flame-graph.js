@@ -455,6 +455,11 @@ class FlameGraph extends HtmlContent {
     })
 
     if (isChanged || redrawGraph) this.updateMarkerBoxes()
+    const div = this.d3CanvasOverlay.select('div')
+    div.append('div')
+      .classed('axis', true)
+      .attr('id', 'x-axis')
+      .html('time')
   }
 }
 
