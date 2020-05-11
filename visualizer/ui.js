@@ -273,6 +273,10 @@ class Ui extends events.EventEmitter {
       id: 'main-content'
     })
 
+    this.yAxis = this.mainContent.addContent('HtmlContent', {
+      id: 'y-axis'
+    })
+
     const flameWrapper = this.mainContent.addContent('FlameGraph', {
       id: 'flame-main',
       htmlElementType: 'section',
