@@ -1,0 +1,10 @@
+#y-axis {
+  width: 20px;
+  background-color: red;
+}
+
+#x-axis {
+  height: 20px;
+  background-color: green;
+  position: relative;
+}
