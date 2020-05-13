@@ -283,31 +283,31 @@ class FlameGraph extends HtmlContent {
     return d3Node.parent.data.hide ? this.getVisibleParent(d3Node.parent) : d3Node.parent
   }
 
-  highlightHoveredNodeOnGraph () {
-    if (this.hoveredNodeData === null) {
-      this.d3Highlighter.classed('show', false)
-      this.d3HighlighterBox.classed('show', false)
-      return
-    }
+  // highlightHoveredNodeOnGraph () {
+  //   if (this.hoveredNodeData === null) {
+  //     this.d3Highlighter.classed('show', false)
+  //     this.d3HighlighterBox.classed('show', false)
+  //     return
+  //   }
 
-    const rect = this.getNodeRect(this.hoveredNodeData)
-    if (rect) {
-      this.d3Highlighter.classed('show', true)
-      this.applyRectToDiv(this.d3Highlighter, rect, true)
+  //   const rect = this.getNodeRect(this.hoveredNodeData)
+  //   if (rect) {
+  //     this.d3Highlighter.classed('show', true)
+  //     this.applyRectToDiv(this.d3Highlighter, rect, true)
 
-      this.d3HighlighterBox.classed('show', true)
-      this.applyRectToDiv(this.d3HighlighterBox, {
-        // Align border inside frame so it's visible against borders, heat etc
-        x: rect.x + Math.min(rect.width - 3, 2),
-        y: rect.y,
-        width: Math.max(rect.width - 2, 3),
-        height: rect.height - 2
-      })
-    } else {
-      this.d3Highlighter.classed('show', false)
-      this.d3HighlighterBox.classed('show', false)
-    }
-  }
+  //     this.d3HighlighterBox.classed('show', true)
+  //     this.applyRectToDiv(this.d3HighlighterBox, {
+  //       // Align border inside frame so it's visible against borders, heat etc
+  //       x: rect.x + Math.min(rect.width - 3, 2),
+  //       y: rect.y,
+  //       width: Math.max(rect.width - 2, 3),
+  //       height: rect.height - 2
+  //     })
+  //   } else {
+  //     this.d3Highlighter.classed('show', false)
+  //     this.d3HighlighterBox.classed('show', false)
+  //   }
+  // }
 
   markNodeAsSelected (node = null) {
     this.d3SelectionMarker.classed('hidden', !node)
