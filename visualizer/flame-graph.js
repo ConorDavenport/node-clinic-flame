@@ -96,14 +96,14 @@ class FlameGraph extends HtmlContent {
     this.resetOverlayContext()
 
     // creating the component to highlight the hovered node on the flame graph
-    this.d3Highlighter = this.d3Element.append('div')
-      .classed('node-highlighter', true)
-    this.d3HighlighterDownArrow = this.d3Highlighter.append('div')
-      .classed('down-arrow', true)
-    this.d3HighlighterVerticalLine = this.d3Highlighter.append('div')
-      .classed('vertical-line', true)
-    this.d3HighlighterBox = this.d3Element.append('div')
-      .classed('highlighter-box', true)
+    // this.d3Highlighter = this.d3Element.append('div')
+    //   .classed('node-highlighter', true)
+    // this.d3HighlighterDownArrow = this.d3Highlighter.append('div')
+    //   .classed('down-arrow', true)
+    // this.d3HighlighterVerticalLine = this.d3Highlighter.append('div')
+    //   .classed('vertical-line', true)
+    // this.d3HighlighterBox = this.d3Element.append('div')
+    //   .classed('highlighter-box', true)
 
     this.d3SelectionMarker = this.d3Element.append('div')
       .classed('selection-box', true)
